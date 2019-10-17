@@ -3,7 +3,7 @@ from app import app
 from bson.json_util import dumps
 from flask import request, jsonify
 import ast,imp,os
-import csv, json
+import csv, json,datetime
 import pandas as pd
 from bson import json_util
 from app import functionGeneral as general
@@ -38,7 +38,7 @@ def create_user():
 def remove_updateUser(id):
     if request.method == 'DELETE':
         return general.delete(collection,id)
-    else:
+    elif request.method == 'PUT':
         return general.update(collection,id)
 
 @app.route("/staff", methods=['GET'])

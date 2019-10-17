@@ -1,0 +1,7 @@
+﻿name api,api ,methods,input,output,proplem
+thêm nhân viên,/staff,methods=['POST'],"[{….},{...},{…..}...]",,
+xóa nhân viên,/staff/<_id>,methods=['DELETE'],,,
+update nhân viên,/staff/<_id>,methods=['PUT'],[{}],,
+filter nhân viên,/staff?_id=<_id>&crew=<crew>,methods=['GET'],,"[{..},{...},{...}...]",
+filter schedule,/schedule?staff_id=<staff_id>&crew=<crew>,methods=['GET'],,"[{..},{...},{...}...]",
+tạo dữ liệu schedule đầu,/schedule/<month>/<year>,methods=['POST'],,,timeout
