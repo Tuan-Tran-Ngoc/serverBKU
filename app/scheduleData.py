@@ -51,8 +51,8 @@ def fetch_schedule():
                 return "",404      
            
         else:
-            if collection.find().count()>0:
-                todata=collection.find({},{"_id":0}) 
+            if collection1.find().count()>0:
+                todata=collection1.find({},{"_id":0}) 
                 df=list(todata)
                 response=json.dumps(df, default=json_util.default)      
                 return response
