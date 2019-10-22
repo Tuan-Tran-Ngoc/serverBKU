@@ -119,11 +119,11 @@ def perdelta(start, end, delta):
         yield curr
         curr += delta
 
-def createScheduleInit(month,year,collection,c1,itemp,staff,staff_id):
-    list=["1","1","1","-1","0","0","0","0"]
+def createScheduleInit(month,year,month1,year1,collection,c1,itemp,staff,staff_id):
+    list=["1","-1","-1","-1","0","0","0","0"]
     if itemp==0:
         collection.insert_one({"staff_id" : staff_id})
-        for result in perdelta(datetime.date(int(year),int(month),1), datetime.date(int(year),int(month)+3,1), datetime.timedelta(days=1)):
+        for result in perdelta(datetime.date(int(year),int(month),21), datetime.date(int(year1),int(month1),21), datetime.timedelta(days=1)):
             collection.update_one(
             { "staff_id": staff_id},
             {   

@@ -1,41 +1,41 @@
-staff_id,startTime,endTime,Content
-E000001915,,,
-E000000479,,,
-E000001046,,,
-E000001503,,,
-E000001302,,,
-E000001498,,,
-E000001047,,,
-E000001298,,,
-E000001491,,,
-E000002283,,,
-E000002292,,,
-E000002183,,,
-E000000403,,,
-E000000447,,,
-E000001048,,,
-E000001306,,,
-E000001483,,,
-E000001313,,,
-E000002285,,,
-E000002286,,,
-E000002299,,,
-E000002804,,,
-E000000441,,,
-E000001051,,,
-E000001297,,,
-E000001312,,,
-E000001497,,,
-E000001309,,,
-E000002287,,,
-E000002301,,,
-E000002351,,,
-E000001049,,,
-E000001308,,,
-E000001916,,,
-E000001487,,,
-E000001296,,,
-E000001496,,,
-E000002288,,,
-E000002289,,,
-E000002290,,,
+﻿id,staff_id,content,Instructor,Time,Local,Date
+1,E000001915,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+2,E000000479,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+3,E000001046,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+4,E000001503,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+5,E000001302,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-22
+6,E000001498,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+7,E000001047,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+8,E000001298,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+9,E000001491,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+10,E000002283,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+11,E000002292,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+12,E000002183,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+13,E000000403,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+14,E000000447,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+15,E000001306,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+16,E000001483,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+17,E000001313,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+18,E000002285,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+19,E000002286,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+20,E000002299,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-01-07
+21,E000002804,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+22,E000000441,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+23,E000001051,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+24,E000001297,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+25,E000001312,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+26,E000001497,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+27,E000001309,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+28,E000002287,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+29,E000002301,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+30,E000002351,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+31,E000001049,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+32,E000001308,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+33,E000001916,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04
+34,E000001487,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+35,E000001296,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+36,E000001496,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+37,E000002288,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+38,E000002289,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+39,E000002290,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2018-12-24
+40,E000001302,Aviation Security training,,8:30 - 12:00,112 Hồng Hà,2019-03-04

@@ -1,41 +1,41 @@
-id,staff_id,name,degree,crew,phone,email
-1,E000001915,Nguyen Huu Nam,B2,1,908634512,nam.nguyenhuu@jetstarpacific.com.vn
-2,E000000479,Dinh Hung Dao,B1,1,988611160,dao.dinh@jetstarpacific.com.vn
-3,E000001046,Dinh Hoang Quan,B1L,1,983326629,quan.hoangdinh@jetstarpacific.com.vn
-4,E000001503,Nguyen Long,A2,1,969967840,long1.nguyen@jetstarpacific.com.vn
-5,E000001302,Nguyen Van Tri,A2,1,792181844,tri.nguyenvan@jetstarpacific.com.vn
-6,E000001498,Nguyen Thanh Danh,A1L3,1,937191912,danh.nguyenthanh@jetstarpacific.com.vn
-7,E000001047,Le Minh Dung,A1,1,903371986,dung.minhle@jetstarpacific.com.vn
-8,E000001298,Duong Thanh Son,MECH,1,1662552155,son.duongthanh@jetstarpacific.com.vn
-9,E000001491,Nguyen Khanh Toan,MECH,1,905221191,toan.nguyenkhanh@jetstarpacific.com.vn
-10,E000002283,Phan Ngoc Tuan,MECH,1,974895391,tuan.phanngoc@jetstarpacific.com.vn
-11,E000002292,Le Huu Tai,MECH,1,1234355272,tai.lehuu@jetstarpacific.com.vn
-12,E000002183,Nguyen Chi Thanh,B2,2,909291698,thanh.nguyenchi@jetstarpacific.com.vn
-13,E000000403,Nguyen Thai Hoang,B1L,2,902843948,hoang.nguyenthai@jetstarpacific.com.vn
-14,E000000447,Le Duc Duy,B1,2,985423245,duy.le@jetstarpacific.com.vn
-15,E000001048,Nguyen Phan Thuong Khanh,A2,2,982807868,khanh.thuongphannguyen@jetstarpacific.com.vn
-16,E000001306,Nguyen Van Ngoc,A1L3,2,1687774408,ngoc.nguyenvan@jetstarpacific.com.vn
-17,E000001483,Huynh Nguyen Thai Hoa,A2L2,2,905922229,hoa.huynhnguyenthai@jetstarpacific.com.vn
-18,E000001313,Duong Tuan Hoang,MECH,2,1214573852,hoang.duongtuan@jetstarpacific.com.vn
-19,E000002285,Nguyen Duy Minh,MECH,2,987362964,minh.nguyenduy@jetstarpacific.com.vn
-20,E000002286,Dang Tuan Anh,MECH,2,981688187,anh.dangtuan@jetstarpacific.com.vn
-21,E000002299,Tran Tuan Anh,MECH,2,1688648558,anh.trantuan@jetstarpacific.com.vn
-22,E000002804,Tran Danh Hoa,B2,3,907382009,Hoa.TranDanh@jetstarpacific.com.vn
-23,E000000441,Hoang Hao Tham,B1,3,944423803,tham.hoang@jetstarpacific.com.vn
-24,E000001051,Thai Nhat Phu,B1L,3,974099626,phu.nhatthai@jetstarpacific.com.vn
-25,E000001297,Pham Van Cuong,A2L2,3,1684594509,cuong.phamvan@jetstarpacific.com.vn
-26,E000001312,Phan Tien Tai,A2L3,3,988231640,tai.phantien@jetstarpacific.com.vn
-27,E000001497,Tran Dinh Quan,MECH,3,916295530,quan.trandinh@jetstarpacific.com.vn
-28,E000001309,Tran Duc Du,MECH,3,988223301,du.tranduc@jetstarpacific.com.vn
-29,E000002287,Le Kim Quoc,MECH,3,1215755594,quoc.lekim@jetstarpacific.com.vn
-30,E000002301,Doan Quoc Bao,MECH,3,929620489,bao.doanquoc@jetstarpacific.com.vn
-31,E000002351,Nguyen Viet Trung,B2,4,944052882,trung.nguyenviet@jetstarpacific.com.vn
-32,E000001049,Le Viet Hai,B1L,4,937693877,hai.vietle@jetstarpacific.com.vn
-33,E000001308,Nguyen Van Khai,A1L3,4,983238461,khai.nguyenvan@jetstarpacific.com.vn
-34,E000001916,Dao Duy Thien,A1,4,902644233,thien.daoduy@jetstarpacific.com.vn
-35,E000001487,Bui Huu Duc,A2L1,4,938801480,duc.buihuu@jetstarpacific.com.vn
-36,E000001296,Nguyen Minh Tri,A1,4,1268682946,tri.nguyenminh@jetstarpacific.com.vn
-37,E000001496,Nguyen Van Thien,MECH,4,974341822,thien.nguyen@jetstarpacific.com.vn
-38,E000002288,Nguyen Ha Minh Hoang,MECH,4,902101005,hoang.nguyenhaminh@jetstarpacific.com.vn
-39,E000002289,Truong Van Thuan,MECH,4,1659121354,thuan.truongvan@jetstarpacific.com.vn
-40,E000002290,Nguyen Van Tien,MECH,4,987437473,tien.nguyenvan@jetstarpacific.com.vn
+id,staff_id,name,degree,crew,phone,email,Type training,Background
+1,E000001915,Nguyen Huu Nam,B2,1,908634512,nam.nguyenhuu@jetstarpacific.com.vn,B2,B1
+2,E000000479,Dinh Hung Dao,B1,1,988611160,dao.dinh@jetstarpacific.com.vn,B1,B1
+3,E000001046,Dinh Hoang Quan,B1L,1,983326629,quan.hoangdinh@jetstarpacific.com.vn,B1,B1
+4,E000001503,Nguyen Long,A2,1,969967840,long1.nguyen@jetstarpacific.com.vn,B2,B12
+5,E000001302,Nguyen Van Tri,A2,1,792181844,tri.nguyenvan@jetstarpacific.com.vn,B2,B2
+6,E000001498,Nguyen Thanh Danh,A1L3,1,937191912,danh.nguyenthanh@jetstarpacific.com.vn,B1,B12
+7,E000001047,Le Minh Dung,A1,1,903371986,dung.minhle@jetstarpacific.com.vn,B1,B1
+8,E000001298,Duong Thanh Son,MECH,1,1662552155,son.duongthanh@jetstarpacific.com.vn,B12,B1
+9,E000001491,Nguyen Khanh Toan,MECH,1,905221191,toan.nguyenkhanh@jetstarpacific.com.vn,B12,B1
+10,E000002283,Phan Ngoc Tuan,MECH,1,974895391,tuan.phanngoc@jetstarpacific.com.vn,B12,B2
+11,E000002292,Le Huu Tai,MECH,1,1234355272,tai.lehuu@jetstarpacific.com.vn,A,B1
+12,E000002183,Nguyen Chi Thanh,B2,2,909291698,thanh.nguyenchi@jetstarpacific.com.vn,B2,B2
+13,E000000403,Nguyen Thai Hoang,B1L,2,902843948,hoang.nguyenthai@jetstarpacific.com.vn,B1,B1
+14,E000000447,Le Duc Duy,B1,2,985423245,duy.le@jetstarpacific.com.vn,B1,B2
+15,E000001048,Nguyen Phan Thuong Khanh,A2,2,982807868,khanh.thuongphannguyen@jetstarpacific.com.vn,B2,B2
+16,E000001306,Nguyen Van Ngoc,A1L3,2,1687774408,ngoc.nguyenvan@jetstarpacific.com.vn,B1,B1
+17,E000001483,Huynh Nguyen Thai Hoa,A2L2,2,905922229,hoa.huynhnguyenthai@jetstarpacific.com.vn,B2,B2
+18,E000001313,Duong Tuan Hoang,MECH,2,1214573852,hoang.duongtuan@jetstarpacific.com.vn,B12,B1
+19,E000002285,Nguyen Duy Minh,MECH,2,987362964,minh.nguyenduy@jetstarpacific.com.vn,B12,B1
+20,E000002286,Dang Tuan Anh,MECH,2,981688187,anh.dangtuan@jetstarpacific.com.vn,B12,B1
+21,E000002299,Tran Tuan Anh,MECH,2,1688648558,anh.trantuan@jetstarpacific.com.vn,A,B2
+22,E000002804,Tran Danh Hoa,B2,3,907382009,Hoa.TranDanh@jetstarpacific.com.vn,B2,B2
+23,E000000441,Hoang Hao Tham,B1,3,944423803,tham.hoang@jetstarpacific.com.vn,B1,B2
+24,E000001051,Thai Nhat Phu,B1L,3,974099626,phu.nhatthai@jetstarpacific.com.vn,B1,B1
+25,E000001297,Pham Van Cuong,A2L2,3,1684594509,cuong.phamvan@jetstarpacific.com.vn,A,B12
+26,E000001312,Phan Tien Tai,A2L3,3,988231640,tai.phantien@jetstarpacific.com.vn,B2,B12
+27,E000001497,Tran Dinh Quan,MECH,3,916295530,quan.trandinh@jetstarpacific.com.vn,B12,B1
+28,E000001309,Tran Duc Du,MECH,3,988223301,du.tranduc@jetstarpacific.com.vn,B12,B1
+29,E000002287,Le Kim Quoc,MECH,3,1215755594,quoc.lekim@jetstarpacific.com.vn,A,B1
+30,E000002301,Doan Quoc Bao,MECH,3,929620489,bao.doanquoc@jetstarpacific.com.vn,A,B1
+31,E000002351,Nguyen Viet Trung,B2,4,944052882,trung.nguyenviet@jetstarpacific.com.vn,B2,B2
+32,E000001049,Le Viet Hai,B1L,4,937693877,hai.vietle@jetstarpacific.com.vn,B1,B1
+33,E000001308,Nguyen Van Khai,A1L3,4,983238461,khai.nguyenvan@jetstarpacific.com.vn,B1,B1
+34,E000001916,Dao Duy Thien,A1,4,902644233,thien.daoduy@jetstarpacific.com.vn,B1,B1
+35,E000001487,Bui Huu Duc,A2L1,4,938801480,duc.buihuu@jetstarpacific.com.vn,B2,B2
+36,E000001296,Nguyen Minh Tri,A1,4,1268682946,tri.nguyenminh@jetstarpacific.com.vn,B1,B1
+37,E000001496,Nguyen Van Thien,MECH,4,974341822,thien.nguyen@jetstarpacific.com.vn,A,B1
+38,E000002288,Nguyen Ha Minh Hoang,MECH,4,902101005,hoang.nguyenhaminh@jetstarpacific.com.vn,A,B1
+39,E000002289,Truong Van Thuan,MECH,4,1659121354,thuan.truongvan@jetstarpacific.com.vn,A,B1
+40,E000002290,Nguyen Van Tien,MECH,4,987437473,tien.nguyenvan@jetstarpacific.com.vn,A,B2

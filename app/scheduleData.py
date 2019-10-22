@@ -15,7 +15,15 @@ helper_module = imp.load_source('*', './app/helpers.py')
 db = client.MyProject
 collection=db.schedule
 collection1=db.demoinit
-        
+
+def converse(month,year):
+    if (month+4)>13:
+        month=3+(month-12)
+        year=year+1
+    else:
+        month=month+3
+    return month,year
+
 @app.route('/schedule',methods=['GET'])
 def fetch_schedule():
     itemp=request.query_string.decode()
@@ -27,7 +35,7 @@ def fetch_schedule():
                 { "$match" : query_params },
                 {
                 "$lookup": {
-                    "from": "schedule",
+                    "from": "demoinit",
                     "localField": "staff_id",    
                     "foreignField": "staff_id", 
                     "as": "fromsStaffSchedule"
@@ -61,7 +69,7 @@ def fetch_schedule():
     except:
         return "",500
 
-@app.route('/schedule/<month>/<year>',methods=['POST'])
+@app.route('/schedule/<month>/<year>',methods=['GET'])
 def schedule(month,year): 
     itemp=itemp2=itemp3=itemp4=0
     c1=0
@@ -69,14 +77,15 @@ def schedule(month,year):
     c3=6
     c4=5
     staff=staff2=staff3=staff4=""
+    month1,year1=converse(int(month),int(year))
     for x in db.staff.find():
         if x["crew"]=="1":
-            general.createScheduleInit(month,year,collection1,c1,itemp,staff,x["staff_id"])
+            general.createScheduleInit(month,year,month1,year1,collection1,c1,itemp,staff,x["staff_id"])
         elif x["crew"]=="2":
-            general.createScheduleInit(month,year,collection1,c2,itemp2,staff2,x["staff_id"])
+            general.createScheduleInit(month,year,month1,year1,collection1,c2,itemp2,staff2,x["staff_id"])
         elif x["crew"]=="3":
-            general.createScheduleInit(month,year,collection1,c3,itemp3,staff3,x["staff_id"])
+            general.createScheduleInit(month,year,month1,year1,collection1,c3,itemp3,staff3,x["staff_id"])
         elif x["crew"]=="4":
-            general.createScheduleInit(month,year,collection1,c4,itemp4,staff4,x["staff_id"])
+            general.createScheduleInit(month,year,month1,year1,collection1,c4,itemp4,staff4,x["staff_id"])
         
     return "1"

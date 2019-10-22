@@ -16,7 +16,7 @@ csvTrainingPath = "./data/training.csv"
 
 db = client.MyProject
 collection=db.training
-
+    
 @app.route("/training", methods=['GET'])
 def fetch_training():
     if ((collection.find().count()>0) is False):
@@ -26,5 +26,19 @@ def fetch_training():
 @app.route('/training',methods=['POST'])
 def create_training():
     return general.create(collection)
+
+@app.route("/updateTraining", methods=['PUT'])
+def updateTraing():
+    for x in collection.find():
+        if (x['Date']!=""):
+            for y in db.demoinit.find({"staff_id":x['staff_id']},{"_id":0}):
+                db.demoinit.update_one(
+                { "staff_id": x['staff_id']},
+                {   
+                    "$set": {x['Date']:"T"}
+                }
+                )
+    return "complete"
+   
 
 
