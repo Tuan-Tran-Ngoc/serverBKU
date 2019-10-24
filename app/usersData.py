@@ -45,3 +45,7 @@ def remove_updateUser(id):
 def fetch_users():
     return general.fetch(collection)
 
+@app.route("/crew/<id>", methods=['POST'])
+def addStaffonCrew(id):
+    return general.fetch(collection)
+

@@ -1,7 +1,11 @@
-﻿name api,api ,methods,input,output,proplem
+﻿name api,api demo,methods,input,output,proplem
 thêm nhân viên,/staff,methods=['POST'],"[{….},{...},{…..}...]",,
 xóa nhân viên,/staff/<_id>,methods=['DELETE'],,,
 update nhân viên,/staff/<_id>,methods=['PUT'],[{}],,
 filter nhân viên,/staff?_id=<_id>&crew=<crew>,methods=['GET'],,"[{..},{...},{...}...]",
 filter schedule,/schedule?staff_id=<staff_id>&crew=<crew>,methods=['GET'],,"[{..},{...},{...}...]",
-tạo dữ liệu schedule đầu,/schedule/<month>/<year>,methods=['POST'],,,timeout
+tạo dữ liệu schedule đầu,/schedule/<month>/<year>,methods=['GET'],,,timeout
+filter nhân viên training,/training?staff_id=<staff_id>,methods=['GET'],,"[{..},{...},{...}...]",
+add trainner vào schedule,/updateTraining,methods=['PUT'],,,
+create lịch training,/training,methods=['POST'],"[{….},{...},{…..}...]",,
+filter nhân viên off,/training?staff_id=<staff_id>,methods=['GET'],,"[{..},{...},{...}...]",

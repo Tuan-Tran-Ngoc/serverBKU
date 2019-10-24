@@ -31,13 +31,12 @@ def create_training():
 def updateTraing():
     for x in collection.find():
         if (x['Date']!=""):
-            for y in db.demoinit.find({"staff_id":x['staff_id']},{"_id":0}):
-                db.demoinit.update_one(
-                { "staff_id": x['staff_id']},
-                {   
-                    "$set": {x['Date']:"T"}
-                }
-                )
+            db.demoinit.update_one(
+            { "staff_id": x['staff_id']},
+            {   
+                "$set": {x['Date']:"T"}
+            }
+            )
     return "complete"
    
 
