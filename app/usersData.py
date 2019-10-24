@@ -45,6 +45,19 @@ def remove_updateUser(id):
 def fetch_users():
     return general.fetch(collection)
 
+@app.route("/crew/<crew>",methods=['PUT'])
+def update_crew(crew):
+    try:
+        db.staff.update_many(
+            {"crew":crew},
+            {
+                "$set":{"crew":""}
+            }
+        )
+        return "",200
+    except:
+        return "",404
+
 @app.route("/crew/<id>", methods=['POST'])
 def addStaffonCrew(id):
     return general.fetch(collection)

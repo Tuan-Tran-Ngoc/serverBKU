@@ -99,16 +99,20 @@ def fetch(collection):
     try:
         query_params = helper_module.parse_query_params(itemp)
         if query_params:
-            records_fetched = collection.find(query_params)
+            records_fetched = collection.find(query_params,{"_id":0})
             if records_fetched.count() > 0:
-                return dumps(records_fetched),202
+                df=list(records_fetched)
+                return jsonify({'ok': query_params, 'data': df}),202
             else:
                 return "", 404
         else:
-            if collection.find().count() > 0:
-                return dumps(collection.find())
+            if collection.find().count()>0:
+                todata=collection.find({},{"_id":0}) 
+                df=list(todata)
+                # response=json.dumps(df, default=json_util.default)      
+                return jsonify({'ok': True, 'data': df}),202
             else:
-                return jsonify([])
+                return jsonify([]),404
     except:
         return "", 500
 
