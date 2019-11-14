@@ -8,6 +8,9 @@ import pandas as pd
 from bson import json_util
 import bson,datetime
 from app import functionGeneral as general
+from io import StringIO
+from flask import make_response,send_from_directory,abort,redirect,flash,url_for,Response
+from werkzeug.utils import secure_filename
 
 # Import the helpers module
 helper_module = imp.load_source('*', './app/helpers.py')
@@ -17,11 +20,11 @@ collection=db.schedule
 collection1=db.demoinit
 
 def converse(month,year):
-    if (month+4)>13:
-        month=3+(month-12)
+    if (month+1)>12:
+        month=1+(month-12)
         year=year+1
     else:
-        month=month+3
+        month=month+1
     return month,year
 
 @app.route('/schedule',methods=['GET'])
@@ -88,3 +91,78 @@ def schedule(month,year):
             general.createScheduleInit(month,year,month1,year1,collection1,c4,itemp4,staff4,x["staff_id"])
         
     return "1"
+
+UPLOAD_DIRECTORY = "./project/api_uploaded_files"
+
+if not os.path.exists(UPLOAD_DIRECTORY):
+    os.makedirs(UPLOAD_DIRECTORY)
+
+@app.route('/schedule/export',methods=['GET'])
+def export_schedule():
+    a="1"
+    b="4"
+    c="2"
+    df=general.read_mongo(collection1)
+    df.to_csv('./project/api_uploaded_files/ROSTER_{0}_{1}_{2}.csv'.format(a,b,c), index=False)
+    files = []
+    # filename="demo.csv"
+    for filename in os.listdir(UPLOAD_DIRECTORY):
+        path = os.path.join(UPLOAD_DIRECTORY, filename)
+        if os.path.isfile(path):
+            files.append(filename)
+    return jsonify(files)
+    # return "complete"
+    
+
+UPLOAD_FOLDER = './project/api_uploaded_files'
+ALLOWED_EXTENSIONS = set(['csv', 'xlsx', 'xls'])
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def checkStaffExist(filename,pathFile):
+    csvfile = open(pathFile, "r")
+    reader = csv.DictReader( csvfile )
+    for each in reader:
+        if db.staff.find({"staff_id":each["staff_id"]}).count()>0:
+            return False
+    csvfile.close()
+    return True
+
+@app.route('/upload', methods=['GET','POST'])
+def upload_file():
+    itemp=""
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return "No file part"
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            # return redirect(request.url)
+            return "No selected file"
+        elif file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            itemp=file.filename
+            file.save(os.path.join(UPLOAD_FOLDER, filename))
+            pathFile='./project/api_uploaded_files/'+itemp
+            if checkStaffExist(itemp,pathFile)==False:
+                return dumps({'message' : 'duplicate staff_id'}),200
+            else: general.saveInitFile(db.staff,pathFile)
+            return redirect(url_for('upload_file',
+                                    filename=filename))
+        
+    return dumps({'message' : 'SUCCESS'}),201
+# @app.route("/getPlotCSV")
+# def getPlotCSV():
+#     with open("./project/api_uploaded_files/schedule.csv") as fp:
+#         csv = fp.read()
+#     a='toilatoi'
+#     return Response(
+#         csv,
+#         mimetype="text/csv",
+#         headers={"Content-disposition":
+#                  "attachment; filename={0}.csv".format(a)})

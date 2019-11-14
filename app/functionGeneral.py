@@ -56,26 +56,29 @@ def create(collection):
         except:
             return "",400
         for x in body:
+            if collection.find({"staff_id":x["staff_id"]}).count()>0:
+                return dumps({'message' : 'duplicate staff_id'}),200
             x["create_at"]=datetime.datetime.now()
             x["update_at"]=datetime.datetime.now()
         record_created=collection.insert(body)
         if isinstance(record_created,list):
-            return jsonify([str(v) for v in record_created]),201
+            return dumps({'message' : 'SUCCESS'}),201
         else:
-            return jsonify(str(record_created)),201
+            return dumps({'message' : 'SUCCESS'}),201
             
-    except:
-        return "",500
+    except Exception:
+        return dumps({'error' : str(Exception)}),500
 
 def delete(collection,id):
     try:
-        delete_user = collection.delete_one({'_id': ObjectId(id)})
+        delete_user = collection.delete_one({'staff_id': id})
+        print(id)
         if delete_user.deleted_count > 0 :
-            return "", 204
+            return dumps({'message' : 'SUCCESS'}), 204
         else:
-            return "", 404
+            return dumps({'message' : 'NOT FOUND'}), 404
     except:
-        return "", 500
+        return dumps({'message' : 'ERROR'}), 500
 
 def update(collection,id):
     try:
@@ -86,11 +89,11 @@ def update(collection,id):
         if collection.find({'_id': ObjectId(id)}).count()>0:
             copy=body[0]
             copy["update_at"]=datetime.datetime.now()
-            records_updated = collection.update({'_id': ObjectId(id)},{"$set":body[0]})
+            records_updated = collection.update({'staff_id': id},{"$set":body[0]})
         # records_updated.modified_count error
-            return "", 200
+            return dumps({'message' : 'SUCCESS'}),200
         else:
-            return "", 404
+            return dumps({'message' : 'NOT FOUND'}), 404
     except:
         return "", 500
 
@@ -153,4 +156,12 @@ def createScheduleInit(month,year,month1,year1,collection,c1,itemp,staff,staff_i
         }
         )          
     itemp=1
+
+def read_mongo(collection):
+    cursor = collection.find()
+    df =  pd.DataFrame(list(cursor))
+    if '_id' in df:
+        del df['_id']
+        print(df[datetime])
+    return df
 
