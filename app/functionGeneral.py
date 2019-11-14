@@ -105,15 +105,16 @@ def fetch(collection):
             records_fetched = collection.find(query_params,{"_id":0})
             if records_fetched.count() > 0:
                 df=list(records_fetched)
-                return jsonify({'ok': query_params, 'data': df}),202
+                response=json.dumps(df, default=json_util.default)     
+                return response,202
             else:
                 return "", 404
         else:
             if collection.find().count()>0:
                 todata=collection.find({},{"_id":0}) 
                 df=list(todata)
-                # response=json.dumps(df, default=json_util.default)      
-                return jsonify({'ok': True, 'data': df}),202
+                response=json.dumps(df, default=json_util.default)      
+                return response,202
             else:
                 return jsonify([]),404
     except:

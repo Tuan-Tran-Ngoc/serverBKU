@@ -55,8 +55,8 @@ def fetch_schedule():
                 ])
             df=list(todata)
             if len(df)>0:
-                # response=json.dumps(df, default=json_util.default)
-                return jsonify({'ok': query_params, 'data': df}),201
+                response=json.dumps(df, default=json_util.default)
+                return response,201
             else:
                 return "",404      
            
@@ -64,8 +64,8 @@ def fetch_schedule():
             if collection1.find().count()>0:
                 todata=collection1.find({},{"_id":0}) 
                 df=list(todata)
-                # response=json.dumps(df, default=json_util.default)      
-                return jsonify({'ok': True, 'data': df})
+                response=json.dumps(df, default=json_util.default)      
+                return response
             else:
                 return jsonify([])
     except:
